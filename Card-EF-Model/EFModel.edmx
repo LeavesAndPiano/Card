@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CardDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_CustomInfo_TB">
+          <Key>
+            <PropertyRef Name="UserInfoID" />
+          </Key>
+          <Property Name="UserInfoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LoginUserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginPassWord" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordQuestion" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="PasswordAnswer" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="CardNo" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="DeleteFlag" Type="smallint" />
+          <Property Name="ExtraField1" Type="varchar" MaxLength="50" />
+          <Property Name="ExtraField2" Type="varchar" MaxLength="500" />
+          <Property Name="ExtraField3" Type="datetime" />
+          <Property Name="ExtraField4" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="ExtraField5" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ExtOrderField" Type="int" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="500" />
+          <Property Name="MyAddress" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="T_Order_TB">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserInfoID" Type="uniqueidentifier" />
+          <Property Name="StoreFrontID" Type="uniqueidentifier" />
+          <Property Name="OrderDateTime" Type="datetime" />
+          <Property Name="OrderCost" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="StoreName" Type="varchar" MaxLength="500" />
+          <Property Name="UserCardNo" Type="varchar" MaxLength="500" />
+          <Property Name="DealNo" Type="varchar" MaxLength="500" />
+          <Property Name="OrderState" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="DeleteFlag" Type="smallint" />
+          <Property Name="ExtraField1" Type="varchar" MaxLength="50" />
+          <Property Name="ExtraField2" Type="varchar" MaxLength="500" />
+          <Property Name="ExtraField3" Type="datetime" />
+          <Property Name="ExtraField4" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="ExtraField5" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ExtOrderField" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CardDBModelStoreContainer">
+          <EntitySet Name="T_CustomInfo_TB" EntityType="Self.T_CustomInfo_TB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Order_TB" EntityType="Self.T_Order_TB" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CardDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_CustomInfo_TB">
+          <Key>
+            <PropertyRef Name="UserInfoID" />
+          </Key>
+          <Property Name="UserInfoID" Type="Guid" Nullable="false" />
+          <Property Name="LoginUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoginPassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="DeleteFlag" Type="Int16" />
+          <Property Name="ExtraField1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraField2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraField3" Type="DateTime" Precision="3" />
+          <Property Name="ExtraField4" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="ExtraField5" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ExtOrderField" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MyAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Order_TB">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Guid" Nullable="false" />
+          <Property Name="UserInfoID" Type="Guid" />
+          <Property Name="StoreFrontID" Type="Guid" />
+          <Property Name="OrderDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OrderCost" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="StoreName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="UserCardNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DealNo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OrderState" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="DeleteFlag" Type="Int16" />
+          <Property Name="ExtraField1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraField2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraField3" Type="DateTime" Precision="3" />
+          <Property Name="ExtraField4" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="ExtraField5" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ExtOrderField" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CardDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_CustomInfo_TB" EntityType="Self.T_CustomInfo_TB" />
+          <EntitySet Name="T_Order_TB" EntityType="Self.T_Order_TB" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CardDBModelStoreContainer" CdmEntityContainer="CardDBEntities">
+          <EntitySetMapping Name="T_CustomInfo_TB">
+            <EntityTypeMapping TypeName="CardDBModel.T_CustomInfo_TB">
+              <MappingFragment StoreEntitySet="T_CustomInfo_TB">
+                <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+                <ScalarProperty Name="LoginUserName" ColumnName="LoginUserName" />
+                <ScalarProperty Name="LoginPassWord" ColumnName="LoginPassWord" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="ExtraField1" ColumnName="ExtraField1" />
+                <ScalarProperty Name="ExtraField2" ColumnName="ExtraField2" />
+                <ScalarProperty Name="ExtraField3" ColumnName="ExtraField3" />
+                <ScalarProperty Name="ExtraField4" ColumnName="ExtraField4" />
+                <ScalarProperty Name="ExtraField5" ColumnName="ExtraField5" />
+                <ScalarProperty Name="ExtOrderField" ColumnName="ExtOrderField" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="MyAddress" ColumnName="MyAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Order_TB">
+            <EntityTypeMapping TypeName="CardDBModel.T_Order_TB">
+              <MappingFragment StoreEntitySet="T_Order_TB">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+                <ScalarProperty Name="StoreFrontID" ColumnName="StoreFrontID" />
+                <ScalarProperty Name="OrderDateTime" ColumnName="OrderDateTime" />
+                <ScalarProperty Name="OrderCost" ColumnName="OrderCost" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="UserCardNo" ColumnName="UserCardNo" />
+                <ScalarProperty Name="DealNo" ColumnName="DealNo" />
+                <ScalarProperty Name="OrderState" ColumnName="OrderState" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="ExtraField1" ColumnName="ExtraField1" />
+                <ScalarProperty Name="ExtraField2" ColumnName="ExtraField2" />
+                <ScalarProperty Name="ExtraField3" ColumnName="ExtraField3" />
+                <ScalarProperty Name="ExtraField4" ColumnName="ExtraField4" />
+                <ScalarProperty Name="ExtraField5" ColumnName="ExtraField5" />
+                <ScalarProperty Name="ExtOrderField" ColumnName="ExtOrderField" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

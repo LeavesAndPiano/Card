@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card", "Card\Card.csproj", "{621106CA-DB46-47BB-AA60-AEFBBBBA1FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-EF-Model", "Card-EF-Model\Card-EF-Model.csproj", "{BDD7AABC-002D-4445-9166-F30A74F565B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-EF-IDAL", "Card-EF-IDAL\Card-EF-IDAL.csproj", "{A421DDD3-B60A-4DCA-AF25-8C0E905F680D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-EF-DAL", "Card-EF-DAL\Card-EF-DAL.csproj", "{8ADFDFB5-421F-4766-A2DD-4077B5BFE136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-EF-BILL", "Card-EF-BILL\Card-EF-BILL.csproj", "{1A8081FA-312E-47EA-A093-C0CC02B98ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car-EF-Factory", "Car-EF-Factory\Car-EF-Factory.csproj", "{2F341D38-0B68-4887-9088-4EBF35C8A766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-EF-IBLL", "Card-EF-IBLL\Card-EF-IBLL.csproj", "{3C6370F0-67E9-4745-8F07-6CF0113D53A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621106CA-DB46-47BB-AA60-AEFBBBBA1FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621106CA-DB46-47BB-AA60-AEFBBBBA1FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621106CA-DB46-47BB-AA60-AEFBBBBA1FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621106CA-DB46-47BB-AA60-AEFBBBBA1FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD7AABC-002D-4445-9166-F30A74F565B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD7AABC-002D-4445-9166-F30A74F565B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD7AABC-002D-4445-9166-F30A74F565B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD7AABC-002D-4445-9166-F30A74F565B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A421DDD3-B60A-4DCA-AF25-8C0E905F680D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A421DDD3-B60A-4DCA-AF25-8C0E905F680D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A421DDD3-B60A-4DCA-AF25-8C0E905F680D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A421DDD3-B60A-4DCA-AF25-8C0E905F680D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ADFDFB5-421F-4766-A2DD-4077B5BFE136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADFDFB5-421F-4766-A2DD-4077B5BFE136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADFDFB5-421F-4766-A2DD-4077B5BFE136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADFDFB5-421F-4766-A2DD-4077B5BFE136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8081FA-312E-47EA-A093-C0CC02B98ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8081FA-312E-47EA-A093-C0CC02B98ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8081FA-312E-47EA-A093-C0CC02B98ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8081FA-312E-47EA-A093-C0CC02B98ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F341D38-0B68-4887-9088-4EBF35C8A766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F341D38-0B68-4887-9088-4EBF35C8A766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F341D38-0B68-4887-9088-4EBF35C8A766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F341D38-0B68-4887-9088-4EBF35C8A766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6370F0-67E9-4745-8F07-6CF0113D53A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6370F0-67E9-4745-8F07-6CF0113D53A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6370F0-67E9-4745-8F07-6CF0113D53A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6370F0-67E9-4745-8F07-6CF0113D53A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF26B466-334C-4CC1-B83B-C913C4A66B31}
+	EndGlobalSection
+EndGlobal

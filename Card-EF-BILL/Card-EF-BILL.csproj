@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A8081FA-312E-47EA-A093-C0CC02B98ADC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Card_EF_BILL</RootNamespace>
+    <AssemblyName>Card-EF-BILL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Car-EF-Factory\Car-EF-Factory.csproj">
+      <Project>{2f341d38-0b68-4887-9088-4ebf35c8a766}</Project>
+      <Name>Car-EF-Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Card-EF-DAL\Card-EF-DAL.csproj">
+      <Project>{8adfdfb5-421f-4766-a2dd-4077b5bfe136}</Project>
+      <Name>Card-EF-DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Card-EF-IBLL\Card-EF-IBLL.csproj">
+      <Project>{3c6370f0-67e9-4745-8f07-6cf0113d53a3}</Project>
+      <Name>Card-EF-IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Card-EF-IDAL\Card-EF-IDAL.csproj">
+      <Project>{a421ddd3-b60a-4dca-af25-8c0e905f680d}</Project>
+      <Name>Card-EF-IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Card-EF-Model\Card-EF-Model.csproj">
+      <Project>{bdd7aabc-002d-4445-9166-f30a74f565b0}</Project>
+      <Name>Card-EF-Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

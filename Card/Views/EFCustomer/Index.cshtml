@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Card_EF_Model.T_CustomInfo_TB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginPassWord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasswordQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasswordAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeleteFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraField1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraField2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraField3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraField4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraField5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtOrderField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginPassWord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasswordQuestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasswordAnswer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeleteFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraField1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraField2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraField3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraField4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraField5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtOrderField)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserInfoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserInfoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserInfoID })
+        </td>
+    </tr>
+}
+
+</table>
